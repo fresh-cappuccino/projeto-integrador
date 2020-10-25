@@ -1,6 +1,6 @@
-#PROJETO INTEGRADOR 2020-2
+# PROJETO INTEGRADOR 2020-2
 
-##Integrantes:
+## Integrantes:
 
 * Fábio Henrique Andrade Silva - 831348
 * Leonardo de Andrade Ferreira - 826635
