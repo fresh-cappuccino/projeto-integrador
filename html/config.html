@@ -1,35 +1,257 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  </head>
+    <link rel="icon" type="image/png" sizes="16x16" href="../resources/images/ICON_TITLE.png">
+    <title>.:: Expresso API ::.</title>
+    <link href="../resources/libs/c3/c3.min.css" rel="stylesheet">
+    <link href="../resources/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../css/style.min.css" rel="stylesheet">
+</head>
+
 <body>
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="AltNav()">&#9776;</a>
-  <div id="colums" style="display: none;">
-    <a href="https://www.google.com">Home</a>
-    <a href="https://www.google.com">Dashboard</a>
-    <a href="https://www.google.com">Clients</a>
-  </div>
-</div>
-      
-<div class="config" style="height: 370px; width: 600px;">
-  
-    <div id="layoutbar" class="bar">Selecione abaixo os Provedores</div><br>
-    <div>
-      <select class="form-control">
-        <option value="JAMEF">JAMEF</option>
-        <option value="RTE">RTE</option>
-        <option value="GBC">GBC</option>
-        <option value="ABC">ABC</option>
-    </select>
-    </div><br>
-    <button class="button" type="submit">Adicionar</button><br><br>
-    <div id="layoutbar" class="bar">Seus Provedores</div>  
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1"></ul>
+                    <ul class="navbar-nav float-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="text-dark">Expresso API</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"class="svg-icon mr-2 ml-1"></i>My Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings" class="svg-icon mr-2 ml-1"></i>Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power" class="svg-icon mr-2 ml-1"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link sidebar-link" href="provedores.html" aria-expanded="false">
+                            <i data-feather="home" class="feather-icon"></i><span class="hide-menu">Configurações</span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                            <i data-feather="bar-chart" class="feather-icon"></i><span class="hide-menu">MapSite </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="../html/index.html" class="sidebar-link"><span class="hide-menu">Dashboard</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-divider"></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="card-group">
+                    
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="card-body">
 
-</div>
+                        <h4 class="card-title">Bootstrap Modals</h4>
 
-<script src="js/main.js"></script>
+                        <p class="text-muted">
+                            A rendered modal with header, body, and set of actions in the footer.
+                        </p>
+
+                        <!-- sample modal content -->
+                        <div id="myModal" class="modal fade" tabindex="-1" role="dialog"
+                            aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6>Text in a modal</h6>
+                                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                        <hr>
+                                        <h6>Overflowing text to show scroll behavior</h6>
+                                        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                                            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+                                            ac consectetur ac, vestibulum at eros.</p>
+                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                            auctor.</p>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+                                            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+                                            dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <!--  Modal content for the above example -->
+                        <div class="modal fade" id="bs-example-modal-lg" tabindex="-1" role="dialog"
+                            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <div class="modal fade" id="bs-example-modal-sm" tabindex="-1" role="dialog"
+                            aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <!-- Full width modal content -->
+                        <div id="full-width-modal" class="modal fade" tabindex="-1" role="dialog"
+                            aria-labelledby="fullWidthModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-full-width">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="fullWidthModalLabel">Modal Heading</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6>Text in a modal</h6>
+                                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                        <hr>
+                                        <h6>Overflowing text to show scroll behavior</h6>
+                                        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                                            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+                                            ac consectetur ac, vestibulum at eros.</p>
+                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                            auctor.</p>
+                                        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
+                                            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
+                                            dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+                        <!-- Long Content Scroll Modal -->
+                        <div class="modal fade" id="scrollable-modal" tabindex="-1" role="dialog"
+                            aria-labelledby="scrollableModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="scrollableModalTitle">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                                            dapibus ac facilisis in, egestas
+                                            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at
+                                            eros.</p>
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+
+
+                        <div class="btn-list">
+                            <!-- Standard  modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#myModal">Standard Modal</button>
+                            <!-- Large modal -->
+                            <button type="button" class="btn btn-info" data-toggle="modal"
+                                data-target="#bs-example-modal-lg">Large modal</button>
+                            <!-- Small modal -->
+                            <button type="button" class="btn btn-success" data-toggle="modal"
+                                data-target="#bs-example-modal-sm">Small modal</button>
+                            <!-- Full width modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#full-width-modal">Full width modal</button>
+                            <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                data-target="#scrollable-modal">Scrollable modal</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <footer class="footer text-center text-muted">
+                Desenvolvido por UNAERP
+            </footer>
+        </div>
+    </div>
+    <script src="../resources/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../resources/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/feather.min.js"></script>
+    <script src="../resources/libs/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../js/sidebarmenu.js"></script>
+    <script src="../js/custom.min.js"></script>
+    <script src="../resources/libs/chartist/dist/chartist.min.js"></script>
+    <script src="../resources/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../resources/data/dashboards/dashboard1.min.js"></script>
+    <script>
+        $(".preloader").fadeOut();
+    </script>
 </body>
+
 </html>
