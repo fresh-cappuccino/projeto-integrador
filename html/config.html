@@ -76,15 +76,82 @@
             </div>
         </aside>
         <div class="page-wrapper">
-            <div class="container-fluid">
-                <div class="card-group">
-                    
+            <div class="card">
+                <div class="card-body">
+                    <ul class="nav nav-tabs nav-justified nav-bordered mb-3">
+                        <li class="nav-item">
+                            <a href="#lista" data-toggle="tab" aria-expanded="false" class="nav-link active">
+                                <i class="mdi mdi-home-variant d-lg-none d-block mr-1"></i>
+                                <span class="d-none d-lg-block">Lista</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#editar" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                <i class="mdi mdi-account-circle d-lg-none d-block mr-1"></i>
+                                <span class="d-none d-lg-block">Editar</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="lista">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="zero_config" class="table table-striped table-bordered no-wrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Usuario</th>
+                                                    <th>Senha</th>
+                                                    <th>E-Mail</th>
+                                                    <th>Telefone</th>
+                                                    <th style="width: 1%;"></th>
+                                                    <th style="width: 1%;"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Contrib 20</td>
+                                                    <td>1234</td>
+                                                    <td>teste@teste.com.br</td>
+                                                    <td>+55 16 94672-1548</td>
+                                                    <td><div data-feather="edit-3" class="feather-icon" onclick=""></div></td>
+                                                    <td><div data-feather="trash-2" class="feather-icon" onclick=""></div></td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="tab-pane" id="editar" style="height: 50%; width: 100%; margin-left: 20%; margin-right: 20%;">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <h6 class="card-title"> Usuario</h6>
+                                    <input type="text" class="form-control" id="UsuarioContribuinte">
+                                </div>
+                                <div class="form-group">
+                                    <h6 class="card-title"> Senha</h6>
+                                    <input type="password" class="form-control" id="SenhaContribuinte">
+                                </div>
+                                <div class="form-group">
+                                    <h6 class="card-title"> E-Mail</h6>
+                                    <input type="text" class="form-control" id="MailContribuinte">
+                                </div>
+                                <div class="form-group">
+                                    <h6 class="card-title"> Telefone</h6>
+                                    <input type="text"  class="form-control" id="FoneSenhaContribuinte">
+                                    
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-success float-right mt-3" style="margin: 5px;">(+) Salvar</button>
+                                    <button type="button" class="btn waves-effect waves-light btn-rounded btn-danger float-right mt-3">(-) Cancelar</button>    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="row mt-3">
-                    
-                </div>
-            </div>
+            </div> 
             <footer class="footer text-center text-muted">
                 Desenvolvido por UNAERP
             </footer>
