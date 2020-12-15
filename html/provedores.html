@@ -100,29 +100,69 @@
                                                     <th>Host</th>
                                                     <th>Porta</th>
                                                     <th></th>
+                                                    <th></th>
+                                                    <th></th>
+
                                                 </tr>
                                             </thead>
                                              
-                                             <!-- fas fa-trash
-                                             fas fa-check -->
                                             <tbody>
-                                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                                                <tr>
-                                                    <td>JAMEF</td>
-                                                    <td>USER</td>
-                                                    <td>PASS1234</td>
-                                                    <td>IP 169...</td>
-                                                    <td>8080</td>
-                                                    <td><i class= "fas fa-trash" aria-hidden="true"></i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Garrett Winters</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>63</td>
-                                                    <td>2011/07/25</td>
-                                                    <td>$170,750</td>
-                                                </tr>
+                                                    <tr>
+                                                        <td>JAMEF</td>
+                                                        <td>USER</td>
+                                                        <td>PASS1234</td>
+                                                        <td>IP 169...</td>
+                                                        <td>8080</td>
+                                                        <td align="center" style="color: #00FF00;">  <! -- Alinhar icone --> 
+                                                            <a class="sidebar-link sidebar-link"">
+                                                                <i data-feather="check-square" class="check-square">
+                                                                    
+                                                                </i>                                        
+                                                            </a> 
+                                                        </td>    
+                                                        <td align="center" style="color: #000000;">  <! -- Alinhar icone --> 
+                                                            <a class="sidebar-link sidebar-link"">
+                                                                <i data-feather="edit" class="edit">
+                                                                    
+                                                                </i>                                        
+                                                            </a> 
+                                                        </td>     
+                                                        <td align="center" style="color: #FF0000;">  <! -- Alinhar icone --> 
+                                                            <a class="sidebar-link sidebar-link"">
+                                                                <i data-feather="trash" class="trash">
+                                                                    
+                                                                </i>                                        
+                                                            </a> 
+                                                        </td>                         
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Garrett Winters</td>
+                                                        <td>Accountant</td>
+                                                        <td>Tokyo</td>
+                                                        <td>63</td>
+                                                        <td>2011/07/25</td>
+                                                        <td align="center" style="color: #00FF00;">  <! -- Alinhar icone --> 
+                                                            <a class="sidebar-link sidebar-link"">
+                                                                <i data-feather="check-square" class="check-square">
+                                                                    
+                                                                </i>                                        
+                                                            </a> 
+                                                        </td>    
+                                                        <td align="center" style="color: #000000;">  <! -- Alinhar icone --> 
+                                                            <a class="sidebar-link sidebar-link"">
+                                                                <i data-feather="edit" class="edit">
+                                                                    
+                                                                </i>                                        
+                                                            </a> 
+                                                        </td>     
+                                                        <td align="center" style="color: #FF0000;">  <! -- Alinhar icone --> 
+                                                            <a class="sidebar-link sidebar-link"">
+                                                                <i data-feather="trash" class="trash">
+                                                                    
+                                                                </i>                                        
+                                                            </a> 
+                                                        </td>   
+                                                    </tr>
                                                 
                                                 </tr>
                                             </tbody>
@@ -150,14 +190,6 @@
                                     </div>
                                 <div class="col-sm-12 col-md-6 col-lg-4">
                                     <div class="form-group">
-                                        <h6 class="card-title"> Host</h6>
-                                        <input type="text" class="form-control" id="HostProvedor">
-                                    </div>
-                                    <div class="form-group">
-                                        <h6 class="card-title"> Porta</h6>
-                                        <input type="text" class="form-control" id="PortaProvedor">
-                                    </div>
-                                    <div class="form-group">
                                         <h6 class="card-title"> Usuario</h6>
                                         <input type="text" class="form-control" id="UsuarioProvedor">
                                     </div>
@@ -165,9 +197,24 @@
                                         <h6 class="card-title"> Senha</h6>
                                         <input type="password" class="form-control" id="SenhaProvedor">
                                     </div>
+                                    <div class="form-group">
+                                        <h6 class="card-title"> Host</h6>
+                                        <input type="text" class="form-control" id="HostProvedor">
+                                    </div>
+                                    <div class="form-group">
+                                        <h6 class="card-title"> Porta</h6>
+                                        <input type="text" class="form-control" id="PortaProvedor">
+                                    </div>
+
                                 </div>
-                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-success float-right mt-3">(+) Adicionar</button>
-                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-danger float-right mt-3">(-) Apagar</button>
+
+                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-success float-right mt-3 " style="margin:15px;"  >(+) Adicionar
+
+                                </button>
+
+                                <button type="button" class="btn waves-effect waves-light btn-rounded btn-danger float-right mt-3">(-) Apagar
+
+                                </button>
                             </div>
                         </div>
                     </div>
